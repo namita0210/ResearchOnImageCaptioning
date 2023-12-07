@@ -1,15 +1,25 @@
-# ResearchOnImageCaptioning
-College Research Work
+#Machine Learning Mastery Blog Tutorial
+<a href="https://machinelearningmastery.com/develop-a-deep-learning-caption-generation-model-in-python/">Tap here to know more</a>
+<li>extract_features(directory), that uses a pre-trained VGG16 model to extract features from images in a specified directory. It iterates through the images, preprocesses them to fit the VGG16 model, passes them through the model, and stores the extracted features in a dictionary with unique identifiers corresponding to each image. Finally, it saves the extracted features to a file named 'features.pkl'. <br>
+so basically it consists of image features corresponding to image names which are reffered to as image identifiers.
+That means this is a mathematical representation of images as matrices corresponding to their image identifiers.
+</li>
 
-1. The dataset being used is Flickr8k dataset
-2.  It consists of 6k training images
-3.  1k validation images
-4.  1k testing images
-5.  Every image has 5 corresponding captions to it.
-6.  The model used is VGG-16 pretrained model - <u>Visual Geometry Group</u>
-7. 16 represents the # of weight layers in the model.
-8.  It is a CNN based model containing 3X3 convolutional layers stacked on top of each other in increasing depth.
-9.  More advanced model will be Resnet which can be trained upto 200 layers deep.
-10.  <a href="https://www.youtube.com/@ManifoldAILearning">youtube tutorial to learn DL in depth</a>
-<a href="https://www.youtube.com/watch?v=sz-hCpuAFYY&list=PL12YWfULs0pnL_9Pj6udM6PE2-SWZbTlX&index=3">Tutorial for VGG-16 code</a>
-11. The image_captioning_vgg.ipynb file code is taken from Nitin's Youtube channel - not from the link pasted above.
+<li>load_doc(filename) function:
+
+Opens a file, reads its content, and returns the text from the file.
+load_descriptions(doc) function:
+
+Processes the text (presumed image descriptions) received as input.
+Creates a dictionary where image identifiers are keys and associated descriptions are stored in lists.
+Splits the text into lines, processes each line to extract image identifiers and descriptions, then stores them in the dictionary.</li>
+
+<li>clean_descriptions(descriptions), takes a dictionary where image identifiers are keys and lists of descriptions are values. It performs text preprocessing on these descriptions by:
+
+Lowercasing all words.
+Removing punctuation, single-character words, and non-alphabetic characters.
+Replacing the original descriptions in the dictionary with the cleaned versions.</li>
+
+<li>save_descriptions(descriptions, filename), is intended to save processed image descriptions to a text file. It iterates through a dictionary where image identifiers are keys and lists of preprocessed descriptions are values. For each image identifier and its associated descriptions, it constructs a string combining the identifier and description. Then, it writes these combined strings, each on a separate line, to the specified file.</li>
+
+<li></li>
