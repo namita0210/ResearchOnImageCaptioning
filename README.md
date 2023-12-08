@@ -2,18 +2,19 @@
 
 <p>This repo consists of 4 branches till now.</p>
 
-<li><b>Main</b> : I extracted this code from Nitin's YT channel and it gave some error, which I was not aware of so I gave up on this code and started looking for other tutorials. I looked at this code after going through many tutorials and realised that it is very similar to the ML mastery code that I understood and started implementing in the new branches.</li>
+<li><b>Main</b> : I extracted this code from Nitin's YT channel and it gave some error, which I was not aware of so I gave up on this code and started looking for other tutorials. I looked at this code after going through many tutorials and realised that it is very similar to the ML mastery code that I understood and started implementing in the new branches.</li><br>
 
 <li><b>ml-mastery-br-1</b> : This code I took from the ML Mastery tutorial. I have identified the follwing mistakes in this code :
 <ul>In the image feature extraction function - the line where I was supposed to remove the last layer from VGG model to only consider the features and not the class weights I removed model.layers[-1].output which gives the class weights and not the features, It should have been model.layers[-2].output</ul>
 <ul>The dataset in this code is the one which I had downloaded from another source and did not have internal splits in train - development- test so the code got stuck there.</ul>
-</li>
+  <i>Can find the function explainations in this branch's readme.</i>
+</li><br>
 
 <li><b>ml-mastery-data-split</b> : In this code I tried to split the data by myself using the os function in python, i tried many times but it was not working. So I finally decided to follow the tutorial completely and download their dataset which was already split into train-test-development directories
 <i>This might also have the VGG layer mistake</i>
-</li>
+</li><br>
 
-<li><b>custom-dataset-ml-mastery</b> : In this I downloaded the dataset from tutorial and started the same process again </li>
+<li><b>custom-dataset-ml-mastery</b> : In this I downloaded the dataset from tutorial and started the same process again </li><br>
 
 <h2>DATASET</h2>
 The dataset being used in all the branches is Flickr8k dataset
